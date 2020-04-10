@@ -20,7 +20,7 @@ public final class IntegerDuplicateDeleter extends DuplicateDeleter<Integer> {
     }
 
     public Integer[] removeDuplicates(int maxNumberOfDuplications) {
-        int j=0;
+        int j = 0;
         Integer[] Result = new Integer[array.length];
         for(int i = 0; i < array.length; i++){
             if(countOccurences(array[i]) < maxNumberOfDuplications){

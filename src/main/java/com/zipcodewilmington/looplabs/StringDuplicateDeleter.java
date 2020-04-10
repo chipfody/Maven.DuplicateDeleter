@@ -20,19 +20,19 @@ public final class StringDuplicateDeleter extends DuplicateDeleter<String> {
     }
 
     public String[] removeDuplicates(int maxNumberOfDuplications) {
-        int k = 0;
+        int j = 0;
         String[]result = new String[array.length];
         for(int i = 0; i < array.length; i++){
-            if(countOccurences(array[i])<maxNumberOfDuplications){
-                result[k] = (array[i]);
-                k++;
+            if(countOccurences(array[i]) < maxNumberOfDuplications){
+                result[j] = (array[i]);
+                j++;
             }
 
 
         }
-        int dupeCount=0;
-        for(int i = 0;i < result.length; i++){
-            if(result[i] == null){
+        int dupeCount = 0;
+        for(int k = 0;k < result.length; k++){
+            if(result[k] == null){
                 dupeCount++;
             }
 
@@ -41,7 +41,7 @@ public final class StringDuplicateDeleter extends DuplicateDeleter<String> {
         int m = 0;
         for(int i = 0; i < result.length; i++){
             if(result[i] != null){
-                newArray[m]=(result[i]);
+                newArray[m] = (result[i]);
                 m++;
             }
         }
@@ -49,11 +49,11 @@ public final class StringDuplicateDeleter extends DuplicateDeleter<String> {
     }
 
 
-    @Override
+
     public String[] removeDuplicatesExactly(int exactNumberOfDuplications) {
         int k = 0;
         String[]result = new String[array.length];
-        for(int i = 0;i < array.length; i++){
+        for(int i = 0; i < array.length; i++){
             if(countOccurences(array[i]) != (exactNumberOfDuplications)){
                 result[k] = array[i];
                 k++;
